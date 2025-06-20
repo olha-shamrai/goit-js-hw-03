@@ -9,7 +9,16 @@
 // Поверни свій новий масив з підходящими числами як результат.
 
 function filterArray(numbers, value) {
+    const filteredNumbers = [];
 
+    for (let i = 0; i < numbers.length; i++) {
+        const number = numbers[i];
+
+        if (number > value) {
+            filteredNumbers.push(number);
+        }
+    }
+    return filteredNumbers;
 }
 
 console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]
